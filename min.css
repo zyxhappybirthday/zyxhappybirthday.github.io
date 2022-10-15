@@ -1,0 +1,295 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+/*容器*/
+.wrap {
+	width: 500px;
+	height: 600px;
+	margin: 600px auto;
+	border: 0px solid red;
+	position: relative;
+}
+/*身体*/
+.xhr_body {
+	width: 250px;
+	height: 350px;
+	background: yellow;
+	border: 5px solid #000;
+	border-radius: 125px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+/*头发*/
+.xhr_hair_1,
+.xhr_hair_2 {
+	width: 100px;
+	height: 200px;
+	border-top: 10px solid #000;
+	border-radius: 50px;
+	position: absolute;
+	float: left;
+	animation: hair 3s ease-in infinite;
+}
+.xhr_hair_1 {
+	top: 101px;
+  		left: 139px;
+	transform: rotate(30deg);
+}
+.xhr_hair_2 {
+	top: 87px;
+  		left: 134px;
+	transform: rotate(35deg);
+}
+/*眼镜*/
+.xhr_eyes {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 60px;
+	left: 35px;
+}
+.xhr_eyes_l,
+.xhr_eyes_r {
+	width: 80px;
+	height: 80px;
+	border: 5px solid #000;
+	float: left;
+	background-color: #fff;
+	border-radius: 50%;
+}
+/*眼镜框腿*/
+.xhr_eyes_l::after,
+.xhr_eyes_r::after {
+	content: "";
+	width: 40px;
+	height: 20px;
+	background-color: #000;
+	position: absolute;
+	top: 30px;	
+}
+.xhr_eyes_l::after {
+	transform: rotate(13deg);
+	left: -37px;
+}
+.xhr_eyes_r::after {
+	transform: rotate(-13deg);
+	right: -17px;
+}
+/*黑眼睛*/
+.xhr_l_black,
+.xhr_r_black {
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	border-radius: 50%;
+	position: absolute;
+	top: 25px;						
+	animation: blackEyes 3s infinite;
+}
+.xhr_l_black {
+	left: 25px;
+}
+.xhr_r_black {
+	right: 45px;
+}
+/*白眼睛*/
+.xhr_l_white,
+.xhr_r_white {
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 35px;
+	animation: whiteEyes 3s infinite;
+}
+.xhr_l_white {
+	left: 40px;
+}
+.xhr_r_white {
+	right: 60px;
+}
+/*嘴巴*/
+.xhr_mouth {
+	width: 50px;
+    height: 30px;
+    border-radius: 0 0 0 25px;
+    border: 5px solid #000;
+    transform: rotate(-30deg);
+    position: absolute;
+    top: 165px;
+    left: 100px;
+    background-color: #fff;
+}
+.xhr_mouth::after {
+	content: "";
+    width: 70px;
+    height: 30px;
+    border-bottom: 5px solid #000;
+    position: absolute;
+    top: -15px;
+    left: -1px;
+    transform: rotate(30deg);
+    background-color: yellow;
+}
+/*裤子*/
+.xhr_trousers_t,
+.xhr_trousers_b {
+	background-color: #00f;
+	border: 5px solid #000;
+	position: absolute;
+}
+.xhr_trousers_t {
+	width: 120px;
+	height: 35px;
+	border-bottom: 0;
+	top: 229px;
+	left: 60px;
+}
+/*肩带*/
+.t_l_belt,
+.t_r_belt {
+	width: 100px;
+	height: 15px;
+	background-color: #00f;
+	border: 5px solid #000;
+	position: absolute;
+	top: -25px;
+}
+.t_l_belt {
+	
+	left: -82px;
+	transform: rotate(30deg);
+}
+.t_r_belt {
+	right: -82px;
+	transform: rotate(-30deg);
+}
+.t_l_belt::after,
+.t_r_belt::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+}
+.t_l_belt::after {
+	left: 85px;
+}
+.t_r_belt::after {
+	right: 85px;
+}
+.xhr_trousers_b {
+	width: 250px;
+	height: 100px;
+	top: 264px;
+	z-index: -1;
+}
+/*手臂*/
+.xhr_hand_l,
+.xhr_hand_r {
+	width: 80px;
+	height: 40px;
+	background-color: yellow;
+	border: 5px solid #000;
+	border-radius: 20px;
+	position: absolute;
+	top: 300px;
+	z-index: -1;
+}
+.xhr_hand_l {
+	left: 85px;
+	transform: rotate(-60deg);
+}
+.xhr_hand_r {
+	right: 85px;
+	transform: rotate(60deg);
+}
+.xhr_hand_l::after,
+.xhr_hand_r::after {
+	content: "";
+	width: 40px;
+	height: 20px;
+	background-color: yellow;
+	border: 5px solid #000;
+	border-radius: 10px;
+	position: absolute;
+	top: 14px;
+}
+.xhr_hand_l::after {
+	left: 14px;
+}
+.xhr_hand_r::after {
+	right: 14px;
+}
+/*腿脚*/
+.xhr_foot_l,
+.xhr_foot_r {
+	width: 35px;
+	height: 60px;
+	background-color: #000;
+	position: absolute;
+	top: 470px;
+	z-index: -1;
+}
+.xhr_foot_l {
+	left: 212px;
+}
+.xhr_foot_r {
+	right: 212px;
+}
+.xhr_foot_l::after,
+.xhr_foot_r::after {
+	content: "";
+	width: 60px;
+	height: 35px;
+	background-color: #000;
+	border-radius: 18px;
+	position: absolute;
+	top: 25px;
+}
+.xhr_foot_l::after {
+	left: -36px;
+}
+.xhr_foot_r::after {
+	right: -36px;
+}
+/*头发动画*/
+@keyframes hair {
+	0%, 50%, 100% {
+		transform: rotate(30deg);
+	}
+	20%, 80% {
+		transform: rotate(36deg);
+	}
+}
+/*眼睛动画*/
+@keyframes blackEyes {
+	0%, 50%, 100% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translate(20px);
+	}
+	80% {
+		transform: translate(-20px);
+	}
+}
+@keyframes whiteEyes {
+	0%, 50%, 100% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: translate(20px, 3px);
+	}
+	80% {
+		transform: translate(-20px, -3px);
+	}
+}
