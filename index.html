@@ -607,4 +607,386 @@ frame();
 
 
  
-
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .doraemon{
+            position: relative;
+            margin: -600px 2180px auto;
+        }
+		/* 头部 */
+        .doraemon .head{
+            width: 320px;
+            height: 300px;
+            border-radius: 150px;
+            background: #07bbee;
+            border: #555 2px solid;
+            box-shadow: -7px 10px 15px rgba(0,0,0,0.45);
+            position: relative;
+        }
+        .doraemon .face{
+            position: relative;
+            z-index: 2;
+        }
+        .doraemon .face .white{
+            border: #000 2px solid;
+            width: 265px;
+            height: 195px;
+            border-radius: 150px 150px;
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            background: #fff;
+           
+        }
+        .doraemon .face .nose{
+            background: #C93300;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #000;
+            border-radius: 30px;
+            position: absolute;
+            top: 110px;
+            left: 140px;
+            z-index: 3;
+        }
+        .doraemon .face .nose .light{
+            border-radius: 5px;
+            box-shadow: 19px 8px 5px #FFF;
+            height: 10px;
+            width: 10px;
+        }
+        .doraemon .face .nose_line{
+            background: #333;
+            width: 3px;
+            height: 100px;
+            top: 143px;
+            left: 155px;
+            position: absolute;
+            z-index: 3;
+        }
+        .doraemon .face .mouth{
+            width: 220px;
+            height: 400px;
+            border-bottom: 3px solid #333;
+            border-radius: 120px;
+            position: absolute;
+            top: -160px;
+            left: 45px;
+        }
+        .doraemon .eyes{
+            position: relative;
+            z-index: 3;
+        }
+        .doraemon .eyes .eye{
+            position: absolute;
+            top: 40px;
+            width: 72px;
+            height: 82px;
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 35px 35px;
+        }
+        .doraemon .eyes .eye .black{
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 14px;
+            position: relative;
+            top: 40px;
+        }
+        .doraemon .eyes .left{
+            left: 82px;
+        }
+        .doraemon .eyes .right{
+            left: 156px;
+        }
+        .doraemon .eyes .eye .bleft{
+            left: 50px;
+        }
+        .doraemon .eyes .eye .bright{
+            left: 7px;
+        }
+        .doraemon .whiskers{
+            background: #fff;
+            width: 220px;
+            height: 80px;
+            position: relative;
+            top: 120px;
+            left: 45px;
+            border-radius: 15px;
+            z-index: 2;
+        }
+        .doraemon .whiskers .whisker{
+            background: #333;
+            height: 2px;
+            width: 60px;
+            position: absolute;
+            z-index: 2;
+        }
+        .doraemon .whiskers .rTop{
+            left: 165px;
+            top: 25px;
+        }
+        .doraemon .whiskers .rt{
+            left: 167px;
+            top: 45px;
+        }
+        .doraemon .whiskers .rBottom{
+            left: 165px;
+            top: 65px;
+        }
+        .doraemon .whiskers .lTop{
+            left: 0;
+            top: 25px;
+        }
+        .doraemon .whiskers .lt{
+            left: -2px;
+            top: 45px;
+        }
+        .doraemon .whiskers .lBottom{
+            left: 0;
+            top: 65px;
+        }
+        .doraemon .whiskers .r160{
+            transform: rotate(160deg);
+            -webkit-transform: rotate(160deg);
+        }
+        .doraemon .whiskers .r20{
+            transform: rotate(20deg);
+            -webkit-transform: rotate(20deg);
+        }
+		/* 脖子 */
+        .doraemon .choker{
+            position: relative;
+            z-index: 4;
+            top: -40px;
+            left: 45px;
+            background: red;
+            border-radius: 10px 10px 10px 10px;
+            border: 2px solid #000000;
+            height: 20px;
+            width: 230px;
+        }
+    /* 身体 */
+        .doraemon .bodys{
+            position: relative;
+            top: -310px;
+        }
+        .doraemon .bodys .body{
+            background: #07BEEA;
+            border: 2px solid #333;
+            height: 165px;
+            width: 220px;
+            position: absolute;
+            left: 50px;
+            top: 265px;
+        }
+        .doraemon .bodys .wraps{
+            background: #FFF;
+            border: 2px solid #000;
+            border-radius: 85px;
+            position: absolute;
+            height: 170px;
+            width: 170px;
+            left: 72px;
+            top: 230px;
+        }
+        .doraemon .bodys .pocket{
+            position: relative;
+            width: 130px;
+            height: 130px;
+            border-radius: 65px;
+            background: #fff;
+            border: 2px solid #000;
+            top: 250px;
+            left: 92px;
+        }
+        .doraemon .bodys .pocket_mask{
+            position: relative;
+            width: 134px;
+            height: 60px;
+            background: #fff;
+            border-bottom: 2px solid #000;
+            top: 125px;
+            left: 92px;
+        }
+		/* 手部 */
+        .doraemon .hand_right{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 272px;
+            left: 248px;
+        }
+        .doraemon .hand_left{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 272px;
+            left: -10px;
+        }
+        .doraemon .arm{
+            background: #000000 ;
+            border: 1px solid #000000;
+            height: 50px;
+            width: 80px;
+            z-index: -1;
+            position: relative;
+        }
+        .doraemon .hand_right .arm{
+            top: 17px;
+            transform: rotate(35deg);
+            
+        }
+        .doraemon .hand_left .arm{
+            top: 17px;
+            background: #07beea;
+            transform: rotate(145deg);
+           
+        }
+       .doraemon .shou{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            border: 2px solid #000;
+            background: #fff;
+           
+        }
+        .doraemon .hand_right .shou{
+            left: 40px;
+            top: 32px;
+        }
+        .doraemon .hand_left .shou{
+            left: -20px;
+            top: 32px;
+        }
+       
+       /* 脚部 */
+        .doraemon .foot{
+            height: 40px;
+            left: 20px;
+            position: relative;
+            top: -141px;
+            width: 280px;
+        }
+        .doraemon .foot .left{
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 80px 60px 60px 40px;
+            height: 30px;
+            left: 8px;
+            position: relative;
+            top: 65px;
+            width: 125px;
+        }
+        .doraemon .foot .right{
+            background: #fff;
+           
+            border: 2px solid #333;
+            border-radius: 80px 60px 60px 40px;
+            height: 30px;
+            width: 125px;
+            top: 31px;
+            left: 141px;
+            position: relative;
+        }
+        .doraemon .foot .foot_rewrite{
+            position: relative;
+            top: -11px;
+            left: 130px;
+            width: 20px;
+            height: 10px;
+            background: #fff;
+            border-top: 2px solid #000;
+            border-right: 2px solid #000;
+            border-left: 2px solid #000;
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+        }
+        @-webkit-keyframes eyemove1 {
+            0%{margin: 0;}
+            35%{margin: -20px 0 0 0;}
+            50%{margin: 0 0 0 0;}
+            75%{margin: -20px 0 0 0;}
+            100%{margin: 10px 0 0 0;}
+        }
+        @-moz-keyframes eyemove2 {
+            0%{margin: 0;}
+            35%{margin: -20px 0 0 0;}
+            50%{margin: 0 0 0 0;}
+            75%{margin: -20px 0 0 0;}
+            100%{margin: 10px 0 0 0;}
+        }
+    
+        .doraemon .eyes .eye .black{
+            -webkit-animation-name: eyemove1;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: eyemove2;
+            -moz-animation-duration: 2s;
+            -moz-animation-timing-function:ease ;
+            -moz-animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+<div class="doraemon">
+    <div class="head">
+        <div class="eyes">
+            <div class="eye left">
+                <div class="black bleft"></div>
+            </div>
+            <div class="eye right">
+                <div class="black bright"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="white"></div>
+            <div class="nose">
+                <div class="light"></div>
+            </div>
+            <div class="nose_line"></div>
+            <div class="mouth"></div>
+            <div class="whiskers">
+                <div class="whisker rTop r160"></div>
+                <div class="whisker rt"></div>
+                <div class="whisker rBottom r20"></div>
+                <div class="whisker lTop r20"></div>
+                <div class="whisker lt"></div>
+                <div class="whisker lBottom r160"></div>
+            </div>
+        </div>
+    </div>
+    <div class="choker">
+        <div class="bell">
+        </div>
+    </div>
+    <div class="bodys">
+        <div class="body"></div>
+        <div class="wraps"></div>
+        <div class="pocket"></div>
+        <div class="pocket_mask"></div>
+    </div>
+    <div class="hand_right">
+        <div class="arm"></div>
+        <div class="shou"></div>
+    </div>
+    <div class="hand_left">
+        <div class="arm"></div>
+        <div class="shou"></div>
+    </div>
+    <div class="foot">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="foot_rewrite"></div>
+    </div>
+</div>
+ 
+</body>
+</html>
